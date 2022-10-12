@@ -22,7 +22,7 @@ $personas = array(
 
   $mujeres = array();
   $hombres = array();
-
+  $edadesM = array();
 
  
 foreach($personas as $persona){
@@ -38,23 +38,23 @@ foreach($personas as $persona){
   }
 
 echo "<h1>Mujeres mayores a 35</h1>";
-$filEdadMujres= array_filter($mujeres, function($MujerEdad) {
-  if($MujerEdad["edad"] > 35){
-  echo  "<strong> Nombre : </strong> {$MujerEdad['nombre']}";   
-  echo "<br>";
-  }
-  return;
-});
+$min =1;
+foreach($mujeres as $edades){
+$edades['edad'];
+  $e;
+  for($i=0; $i < count($edades); $i++){
+    if($min<$edades[$i++]){
+      echo $min=$edades[$i++];
+    }else if ($min>$edades[$i++]){
+        echo $edades[$i++]=$min;
+    }else{
+        echo $min;
+    }
+  
 
-
-echo "<h1>Hombres mayores a 35</h1>";
-$filEdadHombres = array_filter($hombres, function($HombreEdad) {
-  if($HombreEdad["edad"] > 35){
-    echo "<strong> Nombre : </strong> {$HombreEdad['nombre']}  <strong> Edad</strong> : {$HombreEdad['edad']}";   
-  echo "<br>";
   }
-  return;
-});
+  }
+
 
 
 
